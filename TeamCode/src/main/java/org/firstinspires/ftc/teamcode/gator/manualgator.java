@@ -7,8 +7,8 @@ import com.qualcomm.robotcore.util.ElapsedTime;
 
 import java.util.Random;
 
-@TeleOp(name = "gator")
-public class gator_debug extends LinearOpMode {
+@TeleOp(name = "gator_debug")
+public class manualgator extends LinearOpMode {
 
     protected Servo head;
     protected Servo tail_back;
