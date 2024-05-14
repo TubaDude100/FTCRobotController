@@ -77,7 +77,7 @@ public class gator extends LinearOpMode {
                 time.reset();
 
             }
-            telemetry.addData("rand_time", rand_time);
+            telemetry.addData("rand_time", rand_time/2);
             telemetry.addData("rand_tale", rand_tail);
             telemetry.addData("time", time.seconds());
             telemetry.update();
