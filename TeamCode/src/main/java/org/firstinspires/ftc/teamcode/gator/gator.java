@@ -29,8 +29,8 @@ public class gator extends LinearOpMode {
     public void runOpMode() throws InterruptedException {
 
         defaultInit();
-        int low_bound = 40;
-        int high_bound = 80;
+        int low_bound = 20;
+        int high_bound = 40;
 
         while (!isStarted() && !isStopRequested()) {
             head.setPosition(0.15);
@@ -44,9 +44,7 @@ public class gator extends LinearOpMode {
 
             time.reset();
 
-
-
-            int rand_time = random_time.nextInt((high_bound-low_bound) + low_bound);
+            int rand_time = random_time.nextInt(high_bound-low_bound) + low_bound;
             int rand_tail = random_tail.nextInt(3);
 
             telemetry.addData("rand_time", rand_time);
@@ -54,7 +52,7 @@ public class gator extends LinearOpMode {
             telemetry.addData("time", time.seconds());
             telemetry.update();
 
-            Thread.sleep(rand_time * 500);
+            Thread.sleep(rand_time * 1000);
 
             if(rand_time <= time.seconds()){
                 if(head.getPosition() >= 0.4){
@@ -70,14 +68,14 @@ public class gator extends LinearOpMode {
                     tail_front.setPosition(0.8);
                     tail_back.setPosition(0.65);
                 } if (rand_tail == 2){
-                    Thread.sleep(1);
+                    System.out.println("");
                 } else {
                 }
 
                 time.reset();
 
             }
-            telemetry.addData("rand_time", rand_time/2);
+            telemetry.addData("rand_time", rand_time);
             telemetry.addData("rand_tale", rand_tail);
             telemetry.addData("time", time.seconds());
             telemetry.update();
