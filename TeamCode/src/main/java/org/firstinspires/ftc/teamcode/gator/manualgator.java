@@ -46,32 +46,32 @@ public class manualgator extends LinearOpMode {
                 head.setPosition(0.15);
             }
             if(gamepad2.b){
-                head.setPosition(0.5);
+                head.setPosition(0.65);
             }
-            if(gamepad2.x) {
-                tail_front.setPosition(0.35);
+//            if(gamepad2.dpad_up) {
+//                tail_front.setPosition(0.35);
+//                tail_back.setPosition(0.3);
+//            }
+            if(gamepad2.y) {
+                tail_front.setPosition(0.5);
                 tail_back.setPosition(0.35);
             }
-            if(gamepad2.y) {
-                tail_front.setPosition(0.42);
-                tail_back.setPosition(0.42);
-            }
             if(gamepad2.left_bumper) {
-                tail_front.setPosition(0.5);
+//                tail_front.setPosition(0.5);
                 tail_back.setPosition(0.43);
             }
             if(gamepad2.right_bumper) {
-                tail_front.setPosition(0.5);
+//                tail_front.setPosition(0.5);
                 tail_back.setPosition(0.57);
             }
-            if(gamepad2.dpad_down) {
-                tail_front.setPosition(0.58);
-                tail_back.setPosition(0.58);
-            }
-            if(gamepad2.dpad_up) {
-                tail_front.setPosition(0.65);
+            if(gamepad2.x) {
+                tail_front.setPosition(0.8);
                 tail_back.setPosition(0.65);
             }
+//            if(gamepad2.dpad_down) {
+//                tail_front.setPosition(0.65);
+//                tail_back.setPosition(0.7);
+//            }
 
         }
 
